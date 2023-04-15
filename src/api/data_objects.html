@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Objects &mdash; Battery Management System  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Misc" href="misc.html" />
+    <link rel="prev" title="BMS" href="bms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #005e83" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Battery Management System
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v23.0
+
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supported_hardware.html">Supported Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../supported_hardware.html#boards">Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supported_hardware.html#bms-ics">BMS ICs</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/workspace_setup.html">Workspace Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building_flashing.html">Building and Flashing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev/building_flashing.html#boards-with-stm32-mcu">Boards with STM32 MCU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/building_flashing.html#boards-with-esp32-mcu">Boards with ESP32 MCU</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/customization.html">Customization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev/customization.html#hardware-specific-changes">Hardware-specific changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/customization.html#application-firmware-configuration">Application firmware configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dev/customization.html#change-battery-capacity-cell-type-and-number-of-cells-in-series">Change battery capacity, cell type and number of cells in series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dev/customization.html#configure-serial-interface">Configure serial interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/unit_tests.html">Unit Tests</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc.html">Misc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misc.html#eeprom">EEPROM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html#button">Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html#helper">Helper</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #005e83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Battery Management System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Objects</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/LibreSolar/bms-firmware/blob/main/docs/src/api/data_objects.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-objects">
+<h1>Data Objects<a class="headerlink" href="#data-objects" title="Permalink to this heading"></a></h1>
+<p>Handling of ThingSet data nodes. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_ROOT">
+<span class="target" id="data__objects_8h_1aaff125c9dc205ce80e268fa3ad2d07bf"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_ROOT</span></span></span><a class="headerlink" href="#c.ID_ROOT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_DEVICE">
+<span class="target" id="data__objects_8h_1a257d2af610f993d035936277a03221e9"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_DEVICE</span></span></span><a class="headerlink" href="#c.ID_DEVICE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_CONF">
+<span class="target" id="data__objects_8h_1a5b83d540513a812e362452acb4fd4f04"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_CONF</span></span></span><a class="headerlink" href="#c.ID_CONF" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_MEAS">
+<span class="target" id="data__objects_8h_1a87c8324beae812e744668915772d77cf"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_MEAS</span></span></span><a class="headerlink" href="#c.ID_MEAS" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_INPUT">
+<span class="target" id="data__objects_8h_1aea46ad4e5a6f5534fe5af8de7321a6a9"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_INPUT</span></span></span><a class="headerlink" href="#c.ID_INPUT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_CAL">
+<span class="target" id="data__objects_8h_1a8c5f2d445529844185007f3e4edef020"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_CAL</span></span></span><a class="headerlink" href="#c.ID_CAL" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_RPC">
+<span class="target" id="data__objects_8h_1ad103dd831b3d74cf2fddc365ff65788d"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_RPC</span></span></span><a class="headerlink" href="#c.ID_RPC" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ID_CTRL">
+<span class="target" id="data__objects_8h_1a64299fcfc8e7dcf22bce2d905a995051"></span><span class="sig-name descname"><span class="n"><span class="pre">ID_CTRL</span></span></span><a class="headerlink" href="#c.ID_CTRL" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.data_objects_update_conf">
+<span class="target" id="data__objects_8h_1ac693cf35cda92180b765f1e58f4cadd2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data_objects_update_conf</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.data_objects_update_conf" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Callback function to be called when conf values were changed </p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.bat_preset_nmc">
+<span class="target" id="data__objects_8h_1a4bd6ed69e362bfafc2705dece6242293"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bat_preset_nmc</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.bat_preset_nmc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Callback function to apply preset parameters for NMC type via ThingSet </p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.bat_preset_lfp">
+<span class="target" id="data__objects_8h_1aab5c022aa03a850ce4c1f6c9f5c77929"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bat_preset_lfp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.bat_preset_lfp" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Callback function to apply preset parameters for LFP type via ThingSet </p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.print_register">
+<span class="target" id="data__objects_8h_1a6c1115f12e4c0ccfbaa476763680b8d3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_register</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.print_register" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Callback to read and print BMS register via ThingSet </p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.reset_device">
+<span class="target" id="data__objects_8h_1a99ecd64ace3a2da5deb6872c73c058ea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_device</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.reset_device" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Callback to reset device (obviously…) </p>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.shutdown">
+<span class="target" id="data__objects_8h_1a7861ee1569802186a619778efc85af13"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shutdown</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.shutdown" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Callback to invoke bms_shutdown via ThingSet </p>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bms.html" class="btn btn-neutral float-left" title="BMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="misc.html" class="btn btn-neutral float-right" title="Misc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 The Libre Solar Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
